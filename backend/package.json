@@ -1,0 +1,31 @@
+{
+  "name": "typescript-node.js-express-backend",
+  "version": "1.0.2",
+  "main": "server.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "setup": "rm -fr dist node_modules package-lock.json && npm i",
+    "build": "npm run setup && npx tsc",
+    "start": "NODE_ENV=production ts-node --esm server.ts",
+    "dev": "NODE_ENV=development nodemon --exec ts-node --esm server.ts"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "chai": "*",
+    "mocha": "*",
+    "nodemon": "*",
+    "supertest": "*",
+    "ts-node": "*",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "dotenv": "*",
+    "ejs": "*",
+    "express": "*",
+    "mongoose": "*"
+  }
+}
